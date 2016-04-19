@@ -477,7 +477,6 @@ tr.even
   border-color: #e0e0e0;
 }
 
-
 a
 {
   color:#0067b0;
@@ -1757,6 +1756,8 @@ li.social-small
   padding-right: 1.5em;
 }
 
+/**** Animations ****/
+
 .drop
 {
   opacity: 0;
@@ -1775,17 +1776,15 @@ li.social-small
   from{ opacity: 0; -webkit-transform: translate3d(0,-1.5em,0);}
   to{ opacity: 1; -webkit-transform: translate3d(0,0,0);}
 }
-/*
 
-Parallax scroll:
-works fine but add unnecessary load to the user device
+/**** Parallax ****/
 
-html {
+html.parallax {
   height: 100%;
   overflow: hidden;
 }
 
-body
+body.parallax
 {
   margin:0;
   padding:0;
@@ -1795,10 +1794,9 @@ body
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 img.parallax
 {
   transform: translateZ(-0.4px) translateX(-17%) translateY(22%);
   width: 145% !important;
 }
-
-*/
