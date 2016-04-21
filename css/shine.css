@@ -1060,6 +1060,11 @@ ul.table-cell > li
   display: flex;
 }
 
+.max-height
+{
+  height: 100%;
+}
+
 .margin-1-left { margin-left: 4.16%; }
 .margin-2-left { margin-left: 8.33%; }
 .margin-3-left { margin-left: 12.5%; }
