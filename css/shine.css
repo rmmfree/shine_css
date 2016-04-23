@@ -456,7 +456,13 @@ tr.even
 
 .section
 {
-  min-height: 82vh;
+  min-height: 52vh;
+  position: relative;
+}
+
+.xl-section
+{
+  min-height: 145vh;
   position: relative;
 }
 
@@ -1617,6 +1623,12 @@ a.close:hover{color:#fff; background-color: #f88;}
   position: fixed;
 }
 
+.sticky
+{
+  position: sticky;
+  position: -webkit-sticky;
+}
+
 .no-float
 {
   float: none;
@@ -1785,23 +1797,44 @@ li.social-small
 /**** Parallax ****/
 
 html.parallax {
-  height: 100%;
-  overflow: hidden;
+  /*height: 100%;*/
+  overflow: auto;
 }
 
 body.parallax
 {
-  margin:0;
-  padding:0;
-  perspective: 1px;
   transform-style: preserve-3d;
   height: 100%;
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1px;
 }
 
-img.parallax
+.parallax-section
 {
-  transform: translateZ(-0.4px) translateX(-17%) translateY(22%);
-  width: 145% !important;
+    position: relative;
+    padding: 25vh 10%;
+    min-height: 70vh;
+    width: 100vw;
+    box-sizing: border-box;
+    transform-style: inherit;
+    background-attachment: fixed;
+    background: 50% 50% / cover;  
+    transform: translateY(43px) translateZ(-0.4px) scale(1.75);
 }
+
+.parallax-section:before {
+  background: 50% 50% / cover;  
+  transform: translateZ(-1px) scale(2);
+  z-index:-1;
+}
+
+.parallax-section, .parallax-section:before {
+  background: 50% 50% / cover;  
+}
+
+.parallax-content
+{
+  transform: translateZ(0.5px) scale(0.5);
+}
+
